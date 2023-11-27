@@ -1,23 +1,22 @@
+/* A Bison parser, made by GNU Bison 3.8.2.  */
 
-/* A Bison parser, made by GNU Bison 2.4.1.  */
+/* Bison interface for Yacc-like parsers in C
 
-/* Skeleton interface for Bison's Yacc-like parsers in C
-   
-      Copyright (C) 1984, 1989, 1990, 2000, 2001, 2002, 2003, 2004, 2005, 2006
-   Free Software Foundation, Inc.
-   
+   Copyright (C) 1984, 1989-1990, 2000-2015, 2018-2021 Free Software Foundation,
+   Inc.
+
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation, either version 3 of the License, or
    (at your option) any later version.
-   
+
    This program is distributed in the hope that it will be useful,
    but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
-   
+
    You should have received a copy of the GNU General Public License
-   along with this program.  If not, see <http://www.gnu.org/licenses/>.  */
+   along with this program.  If not, see <https://www.gnu.org/licenses/>.  */
 
 /* As a special exception, you may create a larger work that contains
    part or all of the Bison parser skeleton and distribute that work
@@ -28,71 +27,99 @@
    special exception, which will cause the skeleton and the resulting
    Bison output files to be licensed under the GNU General Public
    License without this special exception.
-   
+
    This special exception was added by the Free Software Foundation in
    version 2.2 of Bison.  */
 
+/* DO NOT RELY ON FEATURES THAT ARE NOT DOCUMENTED in the manual,
+   especially those whose name start with YY_ or yy_.  They are
+   private implementation details that can be changed or removed.  */
 
-/* Tokens.  */
-#ifndef YYTOKENTYPE
-# define YYTOKENTYPE
-   /* Put the tokens into the symbol table, so that GDB and other debuggers
-      know about them.  */
-   enum yytokentype {
-     MAX_EXECUTION_TIME_HINT = 1000,
-     RESOURCE_GROUP_HINT = 1001,
-     BKA_HINT = 1002,
-     BNL_HINT = 1003,
-     DUPSWEEDOUT_HINT = 1004,
-     FIRSTMATCH_HINT = 1005,
-     INTOEXISTS_HINT = 1006,
-     LOOSESCAN_HINT = 1007,
-     MATERIALIZATION_HINT = 1008,
-     NO_BKA_HINT = 1009,
-     NO_BNL_HINT = 1010,
-     NO_ICP_HINT = 1011,
-     NO_MRR_HINT = 1012,
-     NO_RANGE_OPTIMIZATION_HINT = 1013,
-     NO_SEMIJOIN_HINT = 1014,
-     MRR_HINT = 1015,
-     QB_NAME_HINT = 1016,
-     SEMIJOIN_HINT = 1017,
-     SUBQUERY_HINT = 1018,
-     DERIVED_MERGE_HINT = 1019,
-     NO_DERIVED_MERGE_HINT = 1020,
-     JOIN_PREFIX_HINT = 1021,
-     JOIN_SUFFIX_HINT = 1022,
-     JOIN_ORDER_HINT = 1023,
-     JOIN_FIXED_ORDER_HINT = 1024,
-     INDEX_MERGE_HINT = 1025,
-     NO_INDEX_MERGE_HINT = 1026,
-     SET_VAR_HINT = 1027,
-     SKIP_SCAN_HINT = 1028,
-     NO_SKIP_SCAN_HINT = 1029,
-     HASH_JOIN_HINT = 1030,
-     NO_HASH_JOIN_HINT = 1031,
-     HINT_ARG_NUMBER = 1032,
-     HINT_ARG_IDENT = 1033,
-     HINT_ARG_QB_NAME = 1034,
-     HINT_ARG_TEXT = 1035,
-     HINT_IDENT_OR_NUMBER_WITH_SCALE = 1036,
-     HINT_CLOSE = 1037,
-     HINT_ERROR = 1038,
-     INDEX_HINT = 1039,
-     NO_INDEX_HINT = 1040,
-     JOIN_INDEX_HINT = 1041,
-     NO_JOIN_INDEX_HINT = 1042,
-     GROUP_INDEX_HINT = 1043,
-     NO_GROUP_INDEX_HINT = 1044,
-     ORDER_INDEX_HINT = 1045,
-     NO_ORDER_INDEX_HINT = 1046,
-     DERIVED_CONDITION_PUSHDOWN_HINT = 1047,
-     NO_DERIVED_CONDITION_PUSHDOWN_HINT = 1048,
-     HINT_ARG_FLOATING_POINT_NUMBER = 1049,
-     YYUNDEF = 1150
-   };
+#ifndef YY_MY_HINT_PARSER_D_OTHER_MYSQL_SERVER_BUILD_SQL_SQL_HINTS_YY_H_INCLUDED
+# define YY_MY_HINT_PARSER_D_OTHER_MYSQL_SERVER_BUILD_SQL_SQL_HINTS_YY_H_INCLUDED
+/* Debug traces.  */
+#ifndef MY_HINT_PARSER_DEBUG
+# if defined YYDEBUG
+#if YYDEBUG
+#   define MY_HINT_PARSER_DEBUG 1
+#  else
+#   define MY_HINT_PARSER_DEBUG 0
+#  endif
+# else /* ! defined YYDEBUG */
+#  define MY_HINT_PARSER_DEBUG 0
+# endif /* ! defined YYDEBUG */
+#endif  /* ! defined MY_HINT_PARSER_DEBUG */
+#if MY_HINT_PARSER_DEBUG
+extern int my_hint_parser_debug;
 #endif
-/* Tokens.  */
+
+/* Token kinds.  */
+#ifndef MY_HINT_PARSER_TOKENTYPE
+# define MY_HINT_PARSER_TOKENTYPE
+  enum my_hint_parser_tokentype
+  {
+    MY_HINT_PARSER_EMPTY = -2,
+    MY_HINT_PARSER_EOF = 0,        /* "end of file"  */
+    MY_HINT_PARSER_error = 256,    /* error  */
+    MY_HINT_PARSER_UNDEF = 1050,   /* "invalid token"  */
+    MAX_EXECUTION_TIME_HINT = 1000, /* MAX_EXECUTION_TIME_HINT  */
+    RESOURCE_GROUP_HINT = 1001,    /* RESOURCE_GROUP_HINT  */
+    BKA_HINT = 1002,               /* BKA_HINT  */
+    BNL_HINT = 1003,               /* BNL_HINT  */
+    DUPSWEEDOUT_HINT = 1004,       /* DUPSWEEDOUT_HINT  */
+    FIRSTMATCH_HINT = 1005,        /* FIRSTMATCH_HINT  */
+    INTOEXISTS_HINT = 1006,        /* INTOEXISTS_HINT  */
+    LOOSESCAN_HINT = 1007,         /* LOOSESCAN_HINT  */
+    MATERIALIZATION_HINT = 1008,   /* MATERIALIZATION_HINT  */
+    NO_BKA_HINT = 1009,            /* NO_BKA_HINT  */
+    NO_BNL_HINT = 1010,            /* NO_BNL_HINT  */
+    NO_ICP_HINT = 1011,            /* NO_ICP_HINT  */
+    NO_MRR_HINT = 1012,            /* NO_MRR_HINT  */
+    NO_RANGE_OPTIMIZATION_HINT = 1013, /* NO_RANGE_OPTIMIZATION_HINT  */
+    NO_SEMIJOIN_HINT = 1014,       /* NO_SEMIJOIN_HINT  */
+    MRR_HINT = 1015,               /* MRR_HINT  */
+    QB_NAME_HINT = 1016,           /* QB_NAME_HINT  */
+    SEMIJOIN_HINT = 1017,          /* SEMIJOIN_HINT  */
+    SUBQUERY_HINT = 1018,          /* SUBQUERY_HINT  */
+    DERIVED_MERGE_HINT = 1019,     /* DERIVED_MERGE_HINT  */
+    NO_DERIVED_MERGE_HINT = 1020,  /* NO_DERIVED_MERGE_HINT  */
+    JOIN_PREFIX_HINT = 1021,       /* JOIN_PREFIX_HINT  */
+    JOIN_SUFFIX_HINT = 1022,       /* JOIN_SUFFIX_HINT  */
+    JOIN_ORDER_HINT = 1023,        /* JOIN_ORDER_HINT  */
+    JOIN_FIXED_ORDER_HINT = 1024,  /* JOIN_FIXED_ORDER_HINT  */
+    INDEX_MERGE_HINT = 1025,       /* INDEX_MERGE_HINT  */
+    NO_INDEX_MERGE_HINT = 1026,    /* NO_INDEX_MERGE_HINT  */
+    SET_VAR_HINT = 1027,           /* SET_VAR_HINT  */
+    SKIP_SCAN_HINT = 1028,         /* SKIP_SCAN_HINT  */
+    NO_SKIP_SCAN_HINT = 1029,      /* NO_SKIP_SCAN_HINT  */
+    HASH_JOIN_HINT = 1030,         /* HASH_JOIN_HINT  */
+    NO_HASH_JOIN_HINT = 1031,      /* NO_HASH_JOIN_HINT  */
+    HINT_ARG_NUMBER = 1032,        /* HINT_ARG_NUMBER  */
+    HINT_ARG_IDENT = 1033,         /* HINT_ARG_IDENT  */
+    HINT_ARG_QB_NAME = 1034,       /* HINT_ARG_QB_NAME  */
+    HINT_ARG_TEXT = 1035,          /* HINT_ARG_TEXT  */
+    HINT_IDENT_OR_NUMBER_WITH_SCALE = 1036, /* HINT_IDENT_OR_NUMBER_WITH_SCALE  */
+    HINT_CLOSE = 1037,             /* HINT_CLOSE  */
+    HINT_ERROR = 1038,             /* HINT_ERROR  */
+    INDEX_HINT = 1039,             /* INDEX_HINT  */
+    NO_INDEX_HINT = 1040,          /* NO_INDEX_HINT  */
+    JOIN_INDEX_HINT = 1041,        /* JOIN_INDEX_HINT  */
+    NO_JOIN_INDEX_HINT = 1042,     /* NO_JOIN_INDEX_HINT  */
+    GROUP_INDEX_HINT = 1043,       /* GROUP_INDEX_HINT  */
+    NO_GROUP_INDEX_HINT = 1044,    /* NO_GROUP_INDEX_HINT  */
+    ORDER_INDEX_HINT = 1045,       /* ORDER_INDEX_HINT  */
+    NO_ORDER_INDEX_HINT = 1046,    /* NO_ORDER_INDEX_HINT  */
+    DERIVED_CONDITION_PUSHDOWN_HINT = 1047, /* DERIVED_CONDITION_PUSHDOWN_HINT  */
+    NO_DERIVED_CONDITION_PUSHDOWN_HINT = 1048, /* NO_DERIVED_CONDITION_PUSHDOWN_HINT  */
+    HINT_ARG_FLOATING_POINT_NUMBER = 1049 /* HINT_ARG_FLOATING_POINT_NUMBER  */
+  };
+  typedef enum my_hint_parser_tokentype my_hint_parser_token_kind_t;
+#endif
+/* Token kinds.  */
+#define MY_HINT_PARSER_EMPTY -2
+#define MY_HINT_PARSER_EOF 0
+#define MY_HINT_PARSER_error 256
+#define MY_HINT_PARSER_UNDEF 1050
 #define MAX_EXECUTION_TIME_HINT 1000
 #define RESOURCE_GROUP_HINT 1001
 #define BKA_HINT 1002
@@ -143,17 +170,13 @@
 #define DERIVED_CONDITION_PUSHDOWN_HINT 1047
 #define NO_DERIVED_CONDITION_PUSHDOWN_HINT 1048
 #define HINT_ARG_FLOATING_POINT_NUMBER 1049
-#define YYUNDEF 1150
+
+/* Value type.  */
 
 
 
 
-#if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-
-# define yystype YYSTYPE /* obsolescent; will be withdrawn */
-# define YYSTYPE_IS_DECLARED 1
-#endif
+int my_hint_parser_parse (class THD *thd, class Hint_scanner *scanner, class PT_hint_list **ret);
 
 
-
-
+#endif /* !YY_MY_HINT_PARSER_D_OTHER_MYSQL_SERVER_BUILD_SQL_SQL_HINTS_YY_H_INCLUDED  */
